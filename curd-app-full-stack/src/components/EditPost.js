@@ -18,7 +18,7 @@ const EditPostForm = () => {
     const fetchPost = async () => {
       setLoading(true); // Set loading to true while fetching
       try {
-        const response = await axios.get(`http://localhost:8080/api/posts/${id}`);
+        const response = await axios.get(`https://new-folder-2-lemon.vercel.app/api/posts/${id}`);
         const post = response.data;
         setTitle(post.title);
         setContent(post.content);
@@ -39,7 +39,7 @@ const EditPostForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:8080/api/posts/${id}`, { title, content, author });
+      await axios.put(`https://new-folder-2-lemon.vercel.app/api/posts/${id}`, { title, content, author });
       setSuccess('Post updated successfully!');
       setTimeout(() => navigate('/Home'), 1500); // Redirect after 1.5 seconds
     } catch (error) {

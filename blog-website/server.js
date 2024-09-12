@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 8080;
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:3000', // Allow only your frontend
+  origin: '*', // Allow only your frontend
 }));
 app.use(express.json());
 

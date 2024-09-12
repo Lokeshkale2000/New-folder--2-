@@ -14,7 +14,7 @@ const BlogPostForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:8080/api/posts', { title, content, author }); // Send author to the backend
+      await axios.post('https://new-folder-2-lemon.vercel.app/api/posts', { title, content, author }); // Send author to the backend
       setSuccess('Post added successfully!');
       setTitle('');
       setContent('');

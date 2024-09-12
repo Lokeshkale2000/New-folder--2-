@@ -24,7 +24,7 @@ const Home = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8080/api/posts/${id}`);
+      await axios.delete(`https://new-folder-2-lemon.vercel.app/api/posts/${id}`);
       setPosts(posts.filter(post => post._id !== id));
     } catch (error) {
       console.error('Error deleting post:', error); // Log error for debugging
