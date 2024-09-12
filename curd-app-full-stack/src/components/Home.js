@@ -11,7 +11,7 @@ const Home = () => {
     // Fetch all posts from the backend
     const fetchPosts = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/posts');
+        const response = await axios.get('https://new-folder-2-kappa-pied.vercel.app/api/posts');
         setPosts(response.data);
       } catch (error) {
         console.error('Error fetching posts:', error); // Log error for debugging
@@ -24,7 +24,7 @@ const Home = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://new-folder-2-lemon.vercel.app/api/posts/${id}`);
+      await axios.delete(`https://new-folder-2-kappa-pied.vercel.app/api/posts/${id}`);
       setPosts(posts.filter(post => post._id !== id));
     } catch (error) {
       console.error('Error deleting post:', error); // Log error for debugging
