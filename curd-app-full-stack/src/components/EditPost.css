@@ -1,0 +1,74 @@
+.edit-post-form {
+    max-width: 500px;
+    margin: 70px auto;
+    padding: 15px;
+    background-color: #718bf0;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  .header{
+    align-content: center;
+    margin-left: 40%;
+  }
+  .edit-post-form h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 12px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #040404;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #e6dbdb;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  .form-group textarea {
+    height: 120px;
+    resize: vertical;
+  }
+  
+  .button {
+    background-color: rgb(26, 200, 26);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: rgb(12, 128, 12);
+  }
+  
+  .success-message {
+    color: #e30456;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 8px;
+  }
+  
+  .error-message {
+    color: #dc3545;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 8px;
+  }
+  

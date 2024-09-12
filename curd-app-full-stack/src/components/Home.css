@@ -1,0 +1,85 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.PostTitle {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.post-list {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  max-width: 800px; /* Ensures content does not stretch too wide */
+}
+
+.post-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px; /* Reduced padding */
+  margin-bottom: 10px;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for better separation */
+  display: flex;
+  align-items: flex-start; /* Align content to the top */
+  justify-content: space-between; 
+  background-color: #9cbfe4;/* Space out title and actions */
+}
+
+.post-content {
+  flex: 1; /* Takes up the remaining space */
+  margin-right: 20px; /* Space between content and buttons */
+}
+
+.post-content h5 {
+  margin: 0 0 5px; /* Reduced margin between title and content */
+}
+
+.post-content p {
+  margin: 5px 0; /* Reduced margin between paragraphs */
+}
+
+.post-actions {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: flex-end; /* Align buttons to the right */
+}
+
+.edit-btn, .delete-btn {
+  color: white;
+  border: none;
+  padding: 5px 8px; /* Reduced padding */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  display: block; /* Block display for vertical stacking */
+  margin-bottom: 5px; /* Reduced space between buttons */
+}
+
+.edit-btn {
+  background-color: #007bff;
+}
+
+.edit-btn:hover {
+  background-color: #0056b3;
+}
+
+.delete-btn {
+  background-color: #e04d5c;
+}
+
+.delete-btn:hover {
+  background-color: #b90617;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
