@@ -15,51 +15,50 @@
   list-style-type: none;
   padding: 0;
   width: 100%;
-  max-width: 800px; /* Ensures content does not stretch too wide */
-}
+  max-width: 800px; }
 
 .post-item {
   border: 1px solid #ddd;
   border-radius: 5px;
-  padding: 10px; /* Reduced padding */
+  padding: 10px; 
   margin-bottom: 10px;
   width: 100%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for better separation */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
   display: flex;
-  align-items: flex-start; /* Align content to the top */
+  align-items: flex-start; 
   justify-content: space-between;
-  background-color: #9cbfe4; /* Space out title and actions */
+  background-color: #9cbfe4;
 }
 
 .post-content {
-  flex: 1; /* Takes up the remaining space */
-  margin-right: 20px; /* Space between content and buttons */
+  flex: 1;
+  margin-right: 20px; 
 }
 
 .post-content h5 {
-  margin: 0 0 5px; /* Reduced margin between title and content */
+  margin: 0 0 5px;
 }
 
 .post-content p {
-  margin: 5px 0; /* Reduced margin between paragraphs */
+  margin: 5px 0; 
 }
 
 .post-actions {
   display: flex;
-  flex-direction: column; /* Stack buttons vertically */
-  align-items: flex-end; /* Align buttons to the right */
+  flex-direction: column;
+  align-items: flex-end; 
 }
 
 .edit-btn, .delete-btn {
   color: white;
   border: none;
-  padding: 5px 8px; /* Reduced padding */
+  padding: 5px 8px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
   text-align: center;
-  display: block; /* Block display for vertical stacking */
-  margin-bottom: 5px; /* Reduced space between buttons */
+  display: block; 
+  margin-bottom: 5px; 
 }
 
 .edit-btn {
@@ -84,54 +83,54 @@
   margin-top: 10px;
 }
 
-/* Responsive styles */
+
 @media (max-width: 768px) {
   .PostTitle {
-    font-size: 20px; /* Smaller font size on medium screens */
+    font-size: 20px; 
     margin-bottom: 15px;
   }
 
   .post-item {
-    padding: 8px; /* Slightly reduced padding */
-    flex-direction: column; /* Stack content and actions vertically */
+    padding: 8px; 
+    flex-direction: column; 
   }
 
   .post-content {
-    margin-right: 0; /* Remove right margin on smaller screens */
-    margin-bottom: 10px; /* Add margin at the bottom for spacing */
+    margin-right: 0; 
+    margin-bottom: 10px; 
   }
 
   .post-actions {
-    align-items: center; /* Center-align buttons */
-    margin-top: 10px; /* Add space above the actions */
+    align-items: center;
+    margin-top: 10px;
   }
 }
 
 @media (max-width: 480px) {
   .PostTitle {
-    font-size: 18px; /* Further reduced font size on small screens */
+    font-size: 18px; 
     margin-bottom: 10px;
   }
 
   .post-item {
-    padding: 6px; /* Further reduced padding */
+    padding: 6px;
   }
 
   .post-content h5 {
-    font-size: 16px; /* Smaller font size for headings */
+    font-size: 16px; 
   }
 
   .post-content p {
-    font-size: 13px; /* Smaller font size for paragraphs */
+    font-size: 13px;
   }
 
   .edit-btn, .delete-btn {
-    font-size: 12px; /* Smaller font size for buttons */
-    padding: 4px 6px; /* Further reduced padding */
+    font-size: 12px;
+    padding: 4px 6px;
   }
 
   .error-message {
-    font-size: 12px; /* Smaller font size for error messages */
-    margin-top: 8px; /* Reduced margin */
+    font-size: 12px; 
+    margin-top: 8px; 
   }
 }

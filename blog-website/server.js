@@ -7,16 +7,16 @@ const postRoutes = require('./routes/postRoutes'); // Ensure the path is correct
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-// Middleware
+
 app.use(cors({
-  origin: '*', // Allow only your frontend
+  origin: '*', 
 }));
 app.use(express.json());
 
-// Routes
+
 app.use('/api/posts', postRoutes);
 
-// Connect to MongoDB
+
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB connected'))
   .catch((err) => console.error('MongoDB connection error:', err));

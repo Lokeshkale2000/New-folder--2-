@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import './Home.css'; // Ensure this CSS file exists and is updated
+import './Home.css';
 
 const Home = () => {
   const [posts, setPosts] = useState([]);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Fetch all posts from the backend
+    
     const fetchPosts = async () => {
       try {
         const response = await axios.get('https://new-folder-2-kappa-pied.vercel.app/api/posts');
         setPosts(response.data);
       } catch (error) {
-        console.error('Error fetching posts:', error); // Log error for debugging
+        console.error('Error fetching posts:', error); 
         setError('Failed to fetch posts. Please try again later.');
       }
     };
@@ -27,7 +27,7 @@ const Home = () => {
       await axios.delete(`https://new-folder-2-kappa-pied.vercel.app/api/posts/${id}`);
       setPosts(posts.filter(post => post._id !== id));
     } catch (error) {
-      console.error('Error deleting post:', error); // Log error for debugging
+      console.error('Error deleting post:', error);
       setError('Failed to delete post. Please try again later.');
     }
   };
@@ -43,7 +43,7 @@ const Home = () => {
               <h5>Title: {post.title}</h5>
               <p>Content: {post.content}</p>
               <p>By: {post.author}</p>
-              <p>At: {new Date(post.createdAt).toLocaleString()}</p> {/* Format date */}
+              <p>At: {new Date(post.createdAt).toLocaleString()}</p> 
             </div>
             <div className="post-actions">
               <Link to={`/edit-post/${post._id}`} className="edit-btn">Edit</Link>

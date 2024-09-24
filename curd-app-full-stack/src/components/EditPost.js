@@ -1,54 +1,52 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
-import './EditPost.css'; // Ensure this CSS file exists and is updated
-
+import './EditPost.css'; 
 const EditPostForm = () => {
-  const { id } = useParams(); // Get the post ID from the URL
+  const { id } = useParams(); 
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [author, setAuthor] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
-  const [loading, setLoading] = useState(true); // Add loading state
+  const [loading, setLoading] = useState(true); 
   const navigate = useNavigate();
 
-  // Fetch the post data when the component mounts or the ID changes
   useEffect(() => {
     const fetchPost = async () => {
-      setLoading(true); // Set loading to true while fetching
+      setLoading(true);
       try {
         const response = await axios.get(`https://new-folder-2-kappa-pied.vercel.app/api/posts/${id}`);
         const post = response.data;
         setTitle(post.title);
         setContent(post.content);
         setAuthor(post.author);
-        setError(''); // Clear any previous error
+        setError(''); 
       } catch (error) {
-        console.error('Error fetching post:', error); // Log error for debugging
+        console.error('Error fetching post:', error); 
         setError('Failed to fetch post');
       } finally {
-        setLoading(false); // Set loading to false once the fetch is complete
+        setLoading(false); 
       }
     };
 
     fetchPost();
   }, [id]);
 
-  // Handle form submission to update the post
+ 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       await axios.put(`https://new-folder-2-kappa-pied.vercel.app/api/posts/${id}`, { title, content, author });
       setSuccess('Post updated successfully!');
-      setTimeout(() => navigate('/Home'), 1500); // Redirect after 1.5 seconds
+      setTimeout(() => navigate('/Home'), 1500); 
     } catch (error) {
-      console.error('Error updating post:', error); // Log error for debugging
+      console.error('Error updating post:', error); 
       setError('Failed to update post');
     }
   };
 
-  // Display loading, error, or form based on the state
+ 
   if (loading) {
     return <p>Loading...</p>;
   }
@@ -65,7 +63,7 @@ const EditPostForm = () => {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             required
-            aria-required="true" // Improve accessibility
+            aria-required="true" 
           />
         </div>
         <div className="form-group">
@@ -75,7 +73,7 @@ const EditPostForm = () => {
             value={content}
             onChange={(e) => setContent(e.target.value)}
             required
-            aria-required="true" // Improve accessibility
+            aria-required="true" 
           />
         </div>
         <div className="form-group">
@@ -86,7 +84,7 @@ const EditPostForm = () => {
             value={author}
             onChange={(e) => setAuthor(e.target.value)}
             required
-            aria-required="true" // Improve accessibility
+            aria-required="true" 
           />
         </div>
         <button type="submit" className='button'>Update</button>

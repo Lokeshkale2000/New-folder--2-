@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Post = require('../models/Post'); 
 
-// Create a new post
+
 router.post('/', async (req, res) => {
   try {
     const { title, author, content } = req.body;
@@ -14,7 +14,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// Get all posts
+
 router.get('/', async (req, res) => {
   try {
     const posts = await Post.find();
@@ -24,7 +24,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Get a single post by ID
+
 router.get('/:id', async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
@@ -37,7 +37,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// Update a post
+
 router.put('/:id', async (req, res) => {
   try {
     const { title, author, content } = req.body;
@@ -57,7 +57,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-// Delete a post
+
 router.delete('/:id', async (req, res) => {
   try {
     const deletedPost = await Post.findByIdAndDelete(req.params.id);
